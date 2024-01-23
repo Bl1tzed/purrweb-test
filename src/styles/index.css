@@ -1,0 +1,74 @@
+@import "normalize.css";
+@import "variables.css";
+@import "fonts.css";
+@import "typography.css";
+
+html {
+  font-size: 10px;
+}
+
+.tabs {
+  background-color: var(--secondary-color-02);
+  width: 100%;
+}
+
+.tabs__wrapper {
+  display: flex;
+  margin-left: 6rem;
+}
+
+.tabs__option {
+  display: flex;
+  padding: 1rem 4rem;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 2rem 2rem 0 0;
+}
+
+.tabs__option_active {
+  color: var(--grayscale-color-07);
+  background-color: var(--grayscale-color-01);
+}
+
+.header {
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 7rem;
+  width: 100%;
+  background-color: var(--grayscale-color-01);
+  color: var(--grayscale-color-07);
+  padding: 0 6rem 0 6rem;
+}
+
+.header__logo {
+  display: inline-flex;
+}
+
+main {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--grayscale-color-01);
+}
+
+.contactSales__button {
+  padding: 1.6rem 3rem;
+  border-radius: 1.6rem;
+  background-color: var(--primary-color-01);
+  color: var(--grayscale-color-07);
+  cursor: pointer;
+  border: none;
+}
+
+.contactSales__button:hover {
+  transition: background-color 0.3s ease-out;
+  background-color: var(--primary-color-00);
+}
+
+.contactSales__button:focus {
+  border: 2px solid var(--primary-color-03);
+}

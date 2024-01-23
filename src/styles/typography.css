@@ -1,0 +1,89 @@
+.T1_Bold_128 {
+  font-family: "Outfit Bold", sans-serif;
+  font-size: 12.8rem;
+}
+.T2_Bold_96 {
+  font-family: "Outfit Bold", sans-serif;
+  font-size: 9.6rem;
+}
+.T3_Bold_64 {
+  font-family: "Outfit Bold", sans-serif;
+  font-size: 6.4rem;
+}
+.T4_Bold_48 {
+  font-family: "Outfit Bold", sans-serif;
+  font-size: 4.8rem;
+}
+.T5_SemiBold_48 {
+  font-family: "Outfit SemiBold", sans-serif;
+  font-size: 4.8rem;
+}
+.T6_Bold_40 {
+  font-family: "Outfit Bold", sans-serif;
+  font-size: 4rem;
+}
+.T7_Bold_32 {
+  font-family: "Outfit Bold", sans-serif;
+  font-size: 3.2rem;
+}
+.T8_Bold_86 {
+  font-family: "Outfit Bold", sans-serif;
+  font-size: 8.6rem;
+}
+.S1_SemiBold_36 {
+  font-family: "Outfit SemiBold", sans-serif;
+  font-size: 3.6rem;
+}
+.S2_SemiBold_24 {
+  font-family: "Outfit SemiBold", sans-serif;
+  font-size: 2.4rem;
+}
+.S3_Regular_24 {
+  font-family: "Outfit Regular", sans-serif;
+  font-size: 2.4rem;
+}
+.S4_SemiBold_20 {
+  font-family: "Outfit SemiBold", sans-serif;
+  font-size: 2rem;
+}
+.S5_Medium_20 {
+  font-family: "Outfit Medium", sans-serif;
+  font-size: 2rem;
+}
+.S6_Regular_20 {
+  font-family: "Outfit Regular", sans-serif;
+  font-size: 2rem;
+}
+.S7_Light_20 {
+  font-family: "Outfit Light", sans-serif;
+  font-size: 2rem;
+}
+.B1_Medium_16 {
+  font-family: "Outfit Medium", sans-serif;
+  font-size: 1.6rem;
+}
+.B2_Regular_16 {
+  font-family: "Outfit Regular", sans-serif;
+  font-size: 1.6rem;
+}
+.B3_Medium_14 {
+  font-family: "Outfit Medium", sans-serif;
+  font-size: 1.4rem;
+}
+.B4_Regular_14 {
+  font-family: "Outfit Regular", sans-serif;
+  font-size: 1.4rem;
+}
+.B5_Light_14 {
+  font-family: "Outfit Light", sans-serif;
+  font-size: 1.4rem;
+}
+.B6_Light_14_Underline {
+  font-family: "Outfit Light", sans-serif;
+  font-size: 1.4rem;
+  text-decoration: underline;
+}
+.B7_Regular_12 {
+  font-family: "Outfit Regular", sans-serif;
+  font-size: 1.2rem;
+}

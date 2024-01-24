@@ -8,25 +8,95 @@
   </head>
   <body>
     <div class="tabs">
-      <div class="tabs__wrapper B1_Medium_16">
+      <div class="tabs__wrapper B_Medium">
         <div class="tabs__option tabs__option_active">For Business</div>
         <div class="tabs__option">For Customers</div>
       </div>
     </div>
     <header class="header">
       <div class="header__logo">
-        <img class="header__logo_image" src="src/svg/logo.svg" alt="Logo" />
-        <div class="header__logo_siteName S1_SemiBold_36">budss</div>
+        <img class="header__logoImage" src="src/svg/logo.svg" alt="Logo" />
+        <div class="header__logoSiteName S_SemiBold">budss</div>
       </div>
       <div class="header__contactSales">
-        <button
-          class="header__contactSales_button contactSales__button S4_SemiBold_20"
-        >
-          Contact Sales
-        </button>
+        <button class="header__button button S_SemiBold">Contact Sales</button>
+      </div>
+      <div class="header__mobileMenu">
+        <img
+          class="header__mobileMenuImage"
+          src="src/svg/mobile_menu.svg"
+          alt="Menu"
+        />
       </div>
     </header>
-    <main></main>
+    <main class="main">
+      <section class="hero">
+        <div class="hero__title T_Bold">
+          Everyone <br />
+          is an Influencer
+        </div>
+        <div class="hero__body B_Regular">
+          Budss is a payments as a service and WOM engine dedicated to
+          acquisition and retention of customers to your business.
+        </div>
+        <button class="hero__button button S_SemiBold">Contact Sales</button>
+      </section>
+      <div class="hero__maskGroup">
+        <img
+          class="hero__image"
+          src="src/images/hero_image.png"
+          alt="Hero Image"
+        />
+        <img
+          class="hero__background"
+          src="src/svg/hero_background.svg"
+          alt="Hero Background"
+        />
+      </div>
+      <section class="about">
+        <div class="about__mainTitle T_Bold">About Budss</div>
+        <div class="about__mainText S_SemiBold">
+          Payment as a service, powered seamlessly by our
+          <span class="highlight">network of shoppers</span>
+        </div>
+        <div class="about__info">
+          <div class="about__infoCard">
+            <img src="src/svg/contactless.svg" alt="" />
+            <div class="about__infoCardTitle T_Bold">Contactless</div>
+            <div class="about__infoCardText B_Regular">
+              Budss uses near field communication (NFC) for making contactless
+              payments.
+            </div>
+          </div>
+          <div class="about__infoCard">
+            <img src="src/svg/increasedBuyingPower.svg" alt="" />
+            <div class="about__infoCardTitle T_Bold">
+              Increased Buying Power
+            </div>
+            <div class="about__infoCardText B_Regular">
+              Returning customers spend up to 3X more.
+            </div>
+          </div>
+          <div class="about__infoCard">
+            <img src="src/svg/analyticsInsights.svg" alt="" />
+            <div class="about__infoCardTitle T_Bold">Analytics & Insights</div>
+            <div class="about__infoCardText B_Regular">
+              Gain a holistic view into your customers’ buying behavior &
+              purchasing patterns.
+            </div>
+          </div>
+          <div class="about__infoCard">
+            <img src="src/svg/fraudProtection.svg" alt="" />
+            <div class="about__infoCardTitle T_Bold">Fraud Protection</div>
+            <div class="about__infoCardText B_Regular">
+              Budss handles all payments with a fraud prevention algorithm to
+              flag high risk purchases & a user set PIN code to keep payment
+              info secure.
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
     <footer></footer>
   </body>
 </html>

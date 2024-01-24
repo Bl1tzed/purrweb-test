@@ -7,6 +7,10 @@ html {
   font-size: 10px;
 }
 
+body {
+  background-color: var(--grayscale-color-01);
+}
+
 .tabs {
   background-color: var(--secondary-color-02);
   width: 100%;
@@ -14,7 +18,7 @@ html {
 
 .tabs__wrapper {
   display: flex;
-  margin-left: 6rem;
+  font-size: 1.6rem;
 }
 
 .tabs__option {
@@ -32,7 +36,6 @@ html {
 }
 
 .header {
-  box-sizing: border-box;
   position: sticky;
   top: 0;
   display: inline-flex;
@@ -42,20 +45,147 @@ html {
   width: 100%;
   background-color: var(--grayscale-color-01);
   color: var(--grayscale-color-07);
-  padding: 0 6rem 0 6rem;
+  padding: 1.6rem;
 }
 
 .header__logo {
   display: inline-flex;
 }
 
-main {
-  height: 100vh;
-  width: 100%;
-  background-color: var(--grayscale-color-01);
+.header__logoImage {
+  height: 4rem;
+  width: 4rem;
 }
 
-.contactSales__button {
+.header__logoSiteName {
+  display: flex;
+  font-size: 2.96rem;
+  align-items: center;
+}
+
+.header__mobileMenu {
+  display: block;
+  padding: 1rem 0.8rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__mobileMenuImage {
+  height: 24px;
+  width: 24px;
+}
+
+.header__button {
+  display: none;
+}
+
+.main {
+  height: 100vh;
+  width: 100%;
+  padding: 5rem 1.6rem 0;
+  color: var(--grayscale-color-07);
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero__title {
+  font-size: 4rem;
+  line-height: 4.3rem;
+}
+
+.hero__body {
+  margin-top: 2rem;
+  font-size: 1.6rem;
+  line-height: 2rem;
+}
+
+.hero__button {
+  margin: 4rem auto 0;
+  width: 100%;
+  max-width: 40rem;
+}
+
+.hero__maskGroup {
+  margin: 12.4rem auto 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 30rem;
+  width: 30rem;
+}
+
+.hero__image {
+  position: relative;
+  z-index: 1;
+  height: 30rem;
+}
+
+.hero__background {
+  position: absolute;
+  top: 1.5rem;
+  left: 3rem;
+  z-index: 0;
+  height: 31.5rem;
+}
+
+.about {
+  margin-top: 4rem;
+}
+
+.about__mainTitle {
+  font-size: 4rem;
+}
+
+.about__mainText {
+  display: inline-block;
+  margin-top: 3rem;
+  font-size: 2.4rem;
+}
+
+.about__info {
+  margin-top: 4rem;
+}
+
+.about__infoCard:not(:first-child) {
+  margin-top: 6rem;
+}
+
+.about__infoCardTitle {
+  margin-top: 1rem;
+  font-size: 3.2rem;
+}
+
+.about__infoCardText {
+  margin-top: 1.6rem;
+  font-size: 1.6rem;
+}
+
+.highlight {
+  position: relative;
+  display: inline-flex;
+  width: fit-content;
+  z-index: 0;
+}
+
+.highlight::after {
+  position: absolute;
+  top: 0.45rem;
+  left: -0.2rem;
+  content: "";
+  border-radius: 1.5rem;
+  width: 105%;
+  height: 2.2rem;
+  rotate: -1.5deg;
+  background-color: var(--primary-color-02);
+  z-index: -1;
+}
+
+.button {
+  font-size: 2rem;
   padding: 1.6rem 3rem;
   border-radius: 1.6rem;
   background-color: var(--primary-color-01);
@@ -64,11 +194,26 @@ main {
   border: none;
 }
 
-.contactSales__button:hover {
+.button:hover {
   transition: background-color 0.3s ease-out;
   background-color: var(--primary-color-00);
 }
 
-.contactSales__button:focus {
+.button:focus {
   border: 2px solid var(--primary-color-03);
+}
+
+@media (min-width: 768px) {
+  .header__button {
+    display: block;
+  }
+  .tabs__wrapper {
+    margin-left: 6rem;
+  }
+  .header {
+    padding: 0 6rem;
+  }
+  .header__mobileMenu {
+    display: none;
+  }
 }

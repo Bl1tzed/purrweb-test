@@ -24,41 +24,51 @@
       <div class="header__mobileMenu">
         <img
           class="header__mobileMenuImage"
-          src="src/svg/mobile_menu.svg"
+          src="src/svg/mobileMenu.svg"
           alt="Menu"
         />
       </div>
     </header>
     <main class="main">
       <section class="hero">
-        <div class="hero__title T_Bold">
-          Everyone <br />
-          is an Influencer
+        <div class="hero__infoWrapper">
+          <div class="hero__title T_Bold">
+            Everyone <br />
+            is an Influencer
+          </div>
+          <div class="hero__body B_Regular">
+            Budss is a payments as a service and WOM engine dedicated to
+            acquisition and retention of customers to your business.
+          </div>
+          <button class="hero__button button S_SemiBold">Contact Sales</button>
         </div>
-        <div class="hero__body B_Regular">
-          Budss is a payments as a service and WOM engine dedicated to
-          acquisition and retention of customers to your business.
+        <div class="hero__maskGroup">
+          <img
+            class="hero__image"
+            src="src/images/heroImage.png"
+            alt="Hero Image"
+          />
+          <img
+            class="hero__background"
+            src="src/svg/hero_background.svg"
+            alt="Hero Background"
+          />
         </div>
-        <button class="hero__button button S_SemiBold">Contact Sales</button>
       </section>
-      <div class="hero__maskGroup">
-        <img
-          class="hero__image"
-          src="src/images/hero_image.png"
-          alt="Hero Image"
-        />
-        <img
-          class="hero__background"
-          src="src/svg/hero_background.svg"
-          alt="Hero Background"
-        />
-      </div>
       <section class="about">
-        <div class="about__mainTitle T_Bold">About Budss</div>
-        <div class="about__mainText S_SemiBold">
-          Payment as a service, powered seamlessly by our
-          <span class="highlight">network of shoppers</span>
+        <div class="about__main">
+          <div class="about__mainTitle T_Bold">About Budss</div>
+          <div class="about__mainText S_SemiBold">
+            Payment as a service, powered seamlessly by our
+            <span class="highlight">network of shoppers</span>
+          </div>
+          <img
+            class="about__lines"
+            src="src/svg/aboutSectionLines.svg"
+            alt="lines"
+          />
         </div>
+
         <div class="about__info">
           <div class="about__infoCard">
             <img src="src/svg/contactless.svg" alt="" />
@@ -94,6 +104,18 @@
               info secure.
             </div>
           </div>
+        </div>
+      </section>
+      <section class="howWorks">
+        <div class="howWorks__mockup">
+          <img
+            class="howWorks__mockupImage"
+            src="src/images/phoneMockup.png"
+            alt="Mockup"
+          />
+          <video class="howWorks__video" autoplay muted loop>
+            <source src="src/videos/howWorksVideo.mp4" type="video/mp4" />
+          </video>
         </div>
       </section>
     </main>

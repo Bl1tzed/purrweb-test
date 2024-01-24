@@ -9,6 +9,26 @@ html {
 
 body {
   background-color: var(--grayscale-color-01);
+  overflow-x: hidden;
+}
+
+.button {
+  font-size: 2rem;
+  padding: 1.6rem 3rem;
+  border-radius: 1.6rem;
+  background-color: var(--primary-color-01);
+  color: var(--grayscale-color-07);
+  cursor: pointer;
+  border: none;
+}
+
+.button:hover {
+  transition: background-color 0.3s ease-out;
+  background-color: var(--primary-color-00);
+}
+
+.button:focus {
+  border: 2px solid var(--primary-color-03);
 }
 
 .tabs {
@@ -46,6 +66,7 @@ body {
   background-color: var(--grayscale-color-01);
   color: var(--grayscale-color-07);
   padding: 1.6rem;
+  z-index: 2;
 }
 
 .header__logo {
@@ -80,13 +101,17 @@ body {
 }
 
 .main {
-  height: 100vh;
+  height: fit-content;
   width: 100%;
   padding: 5rem 1.6rem 0;
   color: var(--grayscale-color-07);
 }
 
 .hero {
+  height: 85svh;
+}
+
+.hero__infoWrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -133,7 +158,12 @@ body {
 }
 
 .about {
+  display: flex;
   margin-top: 4rem;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  position: relative;
+  flex-direction: column;
 }
 
 .about__mainTitle {
@@ -164,6 +194,42 @@ body {
   font-size: 1.6rem;
 }
 
+.about__lines {
+  position: absolute;
+  top: 50rem;
+  left: -6rem;
+  display: none;
+}
+
+.howWorks {
+  display: flex;
+  justify-content: center;
+  margin-top: 8rem;
+}
+
+.howWorks__mockup {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 46.1rem;
+  width: 22.8rem;
+}
+
+.howWorks__mockupImage {
+  position: relative;
+  height: 100%;
+  z-index: 1;
+}
+
+.howWorks__video {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  height: 44rem;
+  border-radius: 2rem;
+  z-index: 0;
+}
+
 .highlight {
   position: relative;
   display: inline-flex;
@@ -173,37 +239,19 @@ body {
 
 .highlight::after {
   position: absolute;
-  top: 0.45rem;
-  left: -0.2rem;
+  top: 0;
+  left: 0;
   content: "";
   border-radius: 1.5rem;
   width: 105%;
-  height: 2.2rem;
+  height: calc(1em - 0.2rem);
   rotate: -1.5deg;
   background-color: var(--primary-color-02);
   z-index: -1;
+  transform: translate(-2%, 25%);
 }
 
-.button {
-  font-size: 2rem;
-  padding: 1.6rem 3rem;
-  border-radius: 1.6rem;
-  background-color: var(--primary-color-01);
-  color: var(--grayscale-color-07);
-  cursor: pointer;
-  border: none;
-}
-
-.button:hover {
-  transition: background-color 0.3s ease-out;
-  background-color: var(--primary-color-00);
-}
-
-.button:focus {
-  border: 2px solid var(--primary-color-03);
-}
-
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .header__button {
     display: block;
   }
@@ -215,5 +263,92 @@ body {
   }
   .header__mobileMenu {
     display: none;
+  }
+  .main {
+    padding: 5rem 6rem 0;
+  }
+  .hero {
+    display: flex;
+    justify-content: start;
+  }
+  .hero__infoWrapper {
+    justify-content: start;
+    flex-shrink: 0;
+  }
+  .hero__title {
+    font-size: 9.6rem;
+    line-height: normal;
+  }
+  .hero__body {
+    width: 54rem;
+    font-size: 2rem;
+    line-height: normal;
+  }
+  .hero__button {
+    margin: 4rem 0 0;
+    width: fit-content;
+  }
+  .hero__maskGroup {
+    margin: 0;
+    height: 50rem;
+    width: 50rem;
+  }
+  .hero__image {
+    height: 50rem;
+  }
+  .hero__background {
+    height: 60rem;
+    top: -4.2rem;
+    left: 4.5rem;
+  }
+  .about {
+    margin-top: 0;
+    flex-direction: row;
+  }
+  .about__info {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .about__mainTitle {
+    font-size: 9.6rem;
+  }
+  .about__mainText {
+    width: 40rem;
+    font-size: 3.6rem;
+  }
+  .about__info {
+    margin-left: 10rem;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    min-width: 680px;
+    gap: 7rem;
+  }
+  .about__infoCard {
+    width: 30rem;
+  }
+  .about__infoCard:not(:first-child) {
+    margin-top: 0;
+  }
+  .about__infoCardTitle {
+    font-size: 4.8rem;
+  }
+  .about__infoCardText {
+    font-size: 2.4rem;
+  }
+  .about__lines {
+    display: block;
+  }
+  .howWorks {
+    margin-top: 30rem;
+  }
+  .howWorks__mockup {
+    height: 62.3rem;
+    width: 30.8rem;
+  }
+  .howWorks__video {
+    height: 59.3rem;
+    top: 1.5rem;
+    left: 1.5rem;
   }
 }

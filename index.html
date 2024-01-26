@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/styles/index.css" />
     <script src="src/js/scroller.js" defer></script>
+    <script src="src/js/headerMenu.js" defer></script>
+    <script src="src/js/modalForm.js" defer></script>
     <title>BUDSS</title>
   </head>
   <body>
@@ -33,10 +35,10 @@
     <main class="main">
       <section class="hero">
         <div class="hero__infoWrapper">
-          <div class="hero__title T_Bold">
+          <h2 class="hero__title T_Bold">
             Everyone <br />
             is an Influencer
-          </div>
+          </h2>
           <div class="hero__body B_Regular">
             Budss is a payments as a service and WOM engine dedicated to
             acquisition and retention of customers to your business.
@@ -58,7 +60,7 @@
       </section>
       <section class="about">
         <div class="about__main">
-          <div class="about__mainTitle T_Bold">About Budss</div>
+          <h2 class="about__mainTitle T_Bold">About Budss</h2>
           <div class="about__mainText S_SemiBold">
             Payment as a service, powered seamlessly by our
             <span class="highlight">network of shoppers</span>
@@ -154,26 +156,26 @@
         <div class="statPanel__improvements">
           <div class="statPanel__improvement">
             <div class="statPanel__improvementPercentage T_Bold">15%</div>
-            <div class="statPanel__improvementText S_SemiBold">
+            <h5 class="statPanel__improvementText S_SemiBold">
               Increase in Purchase Amount
-            </div>
+            </h5>
           </div>
           <div class="statPanel__improvement">
             <div class="statPanel__improvementPercentage T_Bold">30%</div>
-            <div class="statPanel__improvementText S_SemiBold">
+            <h5 class="statPanel__improvementText S_SemiBold">
               Growth in Annual Sales
-            </div>
+            </h5>
           </div>
           <div class="statPanel__improvement">
             <div class="statPanel__improvementPercentage T_Bold">10%</div>
-            <div class="statPanel__improvementText S_SemiBold">
+            <h5 class="statPanel__improvementText S_SemiBold">
               Growth in New Customers
-            </div>
+            </h5>
           </div>
         </div>
       </section>
       <section class="whyBudds">
-        <div class="whyBudds__title T_Bold">Why Budss</div>
+        <h2 class="whyBudds__title T_Bold">Why Budss</h2>
         <div class="whyBudds__subTitle S_SemiBold">
           We Provide Advanced Payment Solutions
           <span class="highlight">To Grow Your Business</span>
@@ -271,7 +273,7 @@
       </section>
       <section class="cta">
         <div class="cta__box">
-          <div class="cta__boxTitle T_Bold">Let Your Business Grow</div>
+          <h2 class="cta__boxTitle T_Bold">Let Your Business Grow</h2>
           <button class="cta__boxButton button S_SemiBold">
             Contact Sales
           </button>
@@ -279,9 +281,9 @@
       </section>
       <section class="awareness">
         <div class="awareness__info">
-          <div class="awareness__infoTitle T_Bold">
+          <h2 class="awareness__infoTitle T_Bold">
             Your Brand Awareness Maters
-          </div>
+          </h2>
           <div class="awareness__infoText S_Regular">
             Budss is a husle free solution to put your brand on any digital
             surface including Instagram, Facebook, Twitter and TikTok
@@ -319,11 +321,19 @@
         </div>
       </section>
       <section class="partners">
-        <img src="src/svg/square.svg" alt="" class="partners__logo" />
-        <img src="src/svg/shopify.svg" alt="" class="partners__logo" />
-        <img src="src/svg/woocommerce.svg" alt="Woo" class="partners__logo" />
-        <img src="src/svg/squarespace.svg" alt="" class="partners__logo" />
-        <img src="src/svg/clover.svg" alt="" class="partners__logo" />
+        <img src="src/svg/square.svg" alt="Square" class="partners__logo" />
+        <img src="src/svg/shopify.svg" alt="Shopify" class="partners__logo" />
+        <img
+          src="src/svg/woocommerce.svg"
+          alt="Woo Commerce"
+          class="partners__logo"
+        />
+        <img
+          src="src/svg/squarespace.svg"
+          alt="Squarespace"
+          class="partners__logo"
+        />
+        <img src="src/svg/clover.svg" alt="Clover" class="partners__logo" />
       </section>
     </main>
     <footer class="footer">
@@ -376,5 +386,150 @@
         </div>
       </div>
     </footer>
+    <div class="mobileMenu">
+      <div class="mobileMenu__box">
+        <button class="mobileMenu__closeButton">
+          <img
+            class="mobileMenu__closeImage"
+            src="src/svg/close.svg"
+            alt="Close"
+          />
+        </button>
+        <button class="mobileMenu__contactButton button S_SemiBold">
+          Contact Sales
+        </button>
+        <div class="mobileMenu__info S_Medium">
+          <a href="#" class="mobileMenu__infoLink">For Business</a>
+          <a href="#" class="mobileMenu__infoLink">For Customers</a>
+          <a href="#" class="mobileMenu__infoLink"> Privacy Policy </a>
+          <a href="#" class="mobileMenu__infoLink"> Terms Of Use - Seller </a>
+          <a href="#" class="mobileMenu__infoLink">
+            Terms of Use - Sellers & Customers
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="modal">
+      <div class="modal__box">
+        <button class="modal__closeButton">
+          <img
+            class="modal__closeButtonImage"
+            src="src/svg/modalClose.svg"
+            alt="Close"
+          />
+        </button>
+        <form class="modal__form" action="" novalidate>
+          <div class="modal__inputs">
+            <div class="modal__input">
+              <label for="name" class="modal__label B_Medium"
+                >Name <span class="redColor">*</span></label
+              >
+              <input
+                class="modal__inputField B_Regular"
+                name="name"
+                id="name"
+                type="text"
+                autocomplete="name"
+                req
+              />
+              <div class="modal__inputError B_Regular redColor">Error</div>
+            </div>
+            <div class="modal__input">
+              <label for="email" class="modal__label B_Medium"
+                >Email <span class="redColor">*</span></label
+              >
+              <input
+                class="modal__inputField B_Regular"
+                name="email"
+                id="email"
+                type="email"
+                autocomplete="email"
+                req
+              />
+              <div class="modal__inputError B_Regular redColor">Error</div>
+            </div>
+            <div class="modal__input">
+              <label for="phoneNumber" class="modal__label B_Medium"
+                >Phone Number <span class="redColor">*</span></label
+              >
+              <input
+                class="modal__inputField B_Regular"
+                name="phoneNumber"
+                id="phoneNumber"
+                type="tel"
+                autocomplete="tel"
+                req
+              />
+              <div class="modal__inputError B_Regular redColor">Error</div>
+            </div>
+            <div class="modal__input">
+              <label for="company" class="modal__label B_Medium">Company</label>
+              <input
+                class="modal__inputField B_Regular"
+                name="company"
+                id="company"
+                type="text"
+              />
+              <div class="modal__inputError B_Regular redColor">Error</div>
+            </div>
+            <div class="modal__input">
+              <label for="url" class="modal__label B_Medium"
+                >Website/Store URL</label
+              >
+              <input
+                class="modal__inputField B_Regular"
+                name="url"
+                id="url"
+                type="text"
+              />
+              <div class="modal__inputError B_Regular redColor">Error</div>
+            </div>
+          </div>
+          <div class="modal__globalError B_Regular redColor" globalError></div>
+          <div class="modal__text B_Light">
+            By submitting this form you are agreeing to Budss's
+            <a href="#" class="modal__link">Privacy Policy</a> and
+            <a href="#" class="modal__link">Terms of Use</a>
+          </div>
+          <button
+            class="modal__button modalButton S_SemiBold"
+            type="submit"
+            disabled
+            id="modalSubmitButton"
+          >
+            Contact Sales
+          </button>
+        </form>
+      </div>
+    </div>
+    <div class="successModal">
+      <div class="successModal__box">
+        <div class="successModal__content">
+          <button class="successModal__closeButton">
+            <img
+              class="modal__closeButtonImage"
+              src="src/svg/modalClose.svg"
+              alt="Close"
+            />
+          </button>
+          <img
+            src="src/svg/successModal.svg"
+            alt="Success!"
+            class="successModal__image"
+          />
+          <div class="successModal__title S_SemiBold">Thank you!</div>
+          <div class="successModal__text S_Regular">
+            Thank you, we have received your application and will contact you
+            soon!
+          </div>
+          <button
+            class="successModal__button modalButton S_SemiBold"
+            id="successModalButton"
+          >
+            Super!
+          </button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

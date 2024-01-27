@@ -16,6 +16,7 @@ const companyInput = document.querySelector("[name=company]");
 const urlInput = document.querySelector("[name=url]");
 
 const successModal = document.querySelector(".successModal");
+
 const successModalCloseButton = document.querySelector(
   ".successModal__closeButton"
 );
@@ -24,6 +25,8 @@ const successModalButton = document.querySelector("#successModalButton");
 for (let i = 0; i < buttons.length; i++) {
   buttons[i].addEventListener("click", () => {
     modal.style.visibility = "visible";
+    bodyOverflowY.setAttribute("hideOverflowY", "true");
+    htmlOverflowY.setAttribute("hideOverflowY", "true");
   });
 }
 
@@ -39,6 +42,8 @@ document.addEventListener("click", (e) => {
     (e.target === modal || e.target === successModal)
   ) {
     e.target.style.visibility = "hidden";
+    bodyOverflowY.setAttribute("hideOverflowY", "false");
+    htmlOverflowY.setAttribute("hideOverflowY", "false");
   }
 });
 
@@ -109,4 +114,6 @@ function validatePhone(phone) {
 
 function closeModal(modal) {
   modal.style.visibility = "hidden";
+  bodyOverflowY.setAttribute("hideOverflowY", "false");
+  htmlOverflowY.setAttribute("hideOverflowY", "false");
 }

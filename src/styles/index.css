@@ -11,17 +11,18 @@ html,
 body {
   overflow-x: hidden;
 }
-body {
-  position: relative;
-  background-color: var(--grayscale-color-01);
-}
-
+html[hideOverflowY="true"],
 body[hideOverflowY="true"] {
   overflow-y: hidden;
 }
 
+html[hideOverflowY="false"],
 body[hideOverflowY="false"] {
   overflow-y: visible;
+}
+body {
+  position: relative;
+  background-color: var(--grayscale-color-01);
 }
 
 h2 {

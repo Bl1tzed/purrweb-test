@@ -4,9 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/styles/index.css" />
-    <script src="src/js/scroller.js" defer></script>
-    <script src="src/js/headerMenu.js" defer></script>
-    <script src="src/js/modalForm.js" defer></script>
+    <script type="module" src="src/js/utilities.js" defer></script>
+    <script type="module" src="src/js/scroller.js" defer></script>
+    <script type="module" src="src/js/headerMenu.js" defer></script>
+    <script type="module" src="src/js/modalForm.js" defer></script>
+    <script type="module" src="src/js/cookieModal.js" defer></script>
     <title>BUDSS</title>
   </head>
   <body>
@@ -17,96 +19,108 @@
       </div>
     </div>
     <header class="header">
-      <div class="header__logo">
-        <img class="header__logoImage" src="src/svg/logo.svg" alt="Logo" />
-        <div class="header__logoSiteName S_SemiBold">budss</div>
-      </div>
-      <div class="header__contactSales">
-        <button class="header__button button S_SemiBold">Contact Sales</button>
-      </div>
-      <div class="header__mobileMenu">
-        <img
-          class="header__mobileMenuImage"
-          src="src/svg/mobileMenu.svg"
-          alt="Menu"
-        />
+      <div class="header__wrapper">
+        <div class="header__logo">
+          <img class="header__logoImage" src="src/svg/logo.svg" alt="Logo" />
+          <div class="header__logoSiteName S_SemiBold">budss</div>
+        </div>
+        <div class="header__contactSales">
+          <button class="header__button button S_SemiBold">
+            Contact Sales
+          </button>
+        </div>
+        <div class="header__mobileMenu">
+          <img
+            class="header__mobileMenuImage"
+            src="src/svg/mobileMenu.svg"
+            alt="Menu"
+          />
+        </div>
       </div>
     </header>
     <main class="main">
       <section class="hero">
-        <div class="hero__infoWrapper">
-          <h2 class="hero__title T_Bold">
-            Everyone <br />
-            is an Influencer
-          </h2>
-          <div class="hero__body B_Regular">
-            Budss is a payments as a service and WOM engine dedicated to
-            acquisition and retention of customers to your business.
+        <div class="hero__wrapper">
+          <div class="hero__infoWrapper">
+            <h2 class="hero__title T_Bold">
+              Everyone <br />
+              is an Influencer
+            </h2>
+            <div class="hero__body B_Regular">
+              Budss is a payments as a service and WOM engine dedicated to
+              acquisition and retention of customers to your business.
+            </div>
+            <button class="hero__button button S_SemiBold">
+              Contact Sales
+            </button>
           </div>
-          <button class="hero__button button S_SemiBold">Contact Sales</button>
-        </div>
-        <div class="hero__maskGroup">
-          <img
-            class="hero__image"
-            src="src/images/heroImage.png"
-            alt="Hero Image"
-          />
-          <img
-            class="hero__background"
-            src="src/svg/hero_background.svg"
-            alt="Hero Background"
-          />
+          <div class="hero__maskGroup">
+            <img
+              class="hero__image"
+              src="src/images/heroImage.png"
+              alt="Hero Image"
+            />
+            <img
+              class="hero__background"
+              src="src/svg/hero_background.svg"
+              alt="Hero Background"
+            />
+          </div>
         </div>
       </section>
       <section class="about">
-        <div class="about__main">
-          <h2 class="about__mainTitle T_Bold">About Budss</h2>
-          <div class="about__mainText S_SemiBold">
-            Payment as a service, powered seamlessly by our
-            <span class="highlight">network of shoppers</span>
+        <div class="about__wrapper">
+          <h2 class="about__title T_Bold">About Budss</h2>
+          <div class="about__box">
+            <div class="about__subtitle S_SemiBold">
+              Payment as a service, powered seamlessly by our
+              <span class="highlight">network of shoppers</span>
+            </div>
+            <div class="about__info">
+              <div class="about__infoCard">
+                <img src="src/svg/contactless.svg" alt="" />
+                <div class="about__infoCardTitle T_Bold">Contactless</div>
+                <div class="about__infoCardText B_Regular">
+                  Budss uses near field communication (NFC) for making
+                  contactless payments.
+                </div>
+              </div>
+              <div class="about__infoCard">
+                <img src="src/svg/increasedBuyingPower.svg" alt="" />
+                <div class="about__infoCardTitle T_Bold">
+                  Increased Buying Power
+                </div>
+                <div class="about__infoCardText B_Regular">
+                  Returning customers spend up to 3X more.
+                </div>
+              </div>
+              <div class="about__infoCard">
+                <img src="src/svg/analyticsInsights.svg" alt="" />
+                <div class="about__infoCardTitle T_Bold">
+                  Analytics & Insights
+                </div>
+                <div class="about__infoCardText B_Regular">
+                  Gain a holistic view into your customers's buying behavior &
+                  purchasing patterns.
+                </div>
+              </div>
+              <div class="about__infoCard">
+                <img src="src/svg/fraudProtection.svg" alt="" />
+                <div class="about__infoCardTitle T_Bold">Fraud Protection</div>
+                <div class="about__infoCardText B_Regular">
+                  Budss handles all payments with a fraud prevention algorithm
+                  to flag high risk purchases & a user set PIN code to keep
+                  payment info secure.
+                </div>
+              </div>
+            </div>
           </div>
+
           <img
             class="about__lines"
             src="src/svg/aboutSectionLines.svg"
             alt="lines"
           />
-        </div>
-
-        <div class="about__info">
-          <div class="about__infoCard">
-            <img src="src/svg/contactless.svg" alt="" />
-            <div class="about__infoCardTitle T_Bold">Contactless</div>
-            <div class="about__infoCardText B_Regular">
-              Budss uses near field communication (NFC) for making contactless
-              payments.
-            </div>
-          </div>
-          <div class="about__infoCard">
-            <img src="src/svg/increasedBuyingPower.svg" alt="" />
-            <div class="about__infoCardTitle T_Bold">
-              Increased Buying Power
-            </div>
-            <div class="about__infoCardText B_Regular">
-              Returning customers spend up to 3X more.
-            </div>
-          </div>
-          <div class="about__infoCard">
-            <img src="src/svg/analyticsInsights.svg" alt="" />
-            <div class="about__infoCardTitle T_Bold">Analytics & Insights</div>
-            <div class="about__infoCardText B_Regular">
-              Gain a holistic view into your customers's buying behavior &
-              purchasing patterns.
-            </div>
-          </div>
-          <div class="about__infoCard">
-            <img src="src/svg/fraudProtection.svg" alt="" />
-            <div class="about__infoCardTitle T_Bold">Fraud Protection</div>
-            <div class="about__infoCardText B_Regular">
-              Budss handles all payments with a fraud prevention algorithm to
-              flag high risk purchases & a user set PIN code to keep payment
-              info secure.
-            </div>
-          </div>
         </div>
       </section>
       <section class="howWorks">
@@ -137,6 +151,8 @@
             >
               <li class="secondary01">How Budds Works</li>
               <li class="outline">How Budds Works</li>
+              <li class="secondary01">How Budds Works</li>
+              <li class="outline">How Budds Works</li>
             </ul>
           </div>
 
@@ -147,6 +163,8 @@
             >
               <li class="outline">How Budds Works</li>
               <li class="primary02">How Budds Works</li>
+              <li class="outline">How Budds Works</li>
+              <li class="primary02">How Budds Works</li>
             </ul>
           </div>
 
@@ -155,6 +173,8 @@
               class="howWorks__scrollerInner tagList T_Bold"
               data-scroll-animate
             >
+              <li class="secondary02">How Budds Works</li>
+              <li class="outline">How Budds Works</li>
               <li class="secondary02">How Budds Works</li>
               <li class="outline">How Budds Works</li>
             </ul>
@@ -289,113 +309,121 @@
         </div>
       </section>
       <section class="awareness">
-        <div class="awareness__info">
-          <h2 class="awareness__infoTitle T_Bold">
-            Your Brand Awareness Maters
-          </h2>
-          <div class="awareness__infoText S_Regular">
-            Budss is a husle free solution to put your brand on any digital
-            surface including Instagram, Facebook, Twitter and TikTok
+        <div class="awareness__wrapper">
+          <div class="awareness__info">
+            <h2 class="awareness__infoTitle T_Bold">
+              Your Brand Awareness Maters
+            </h2>
+            <div class="awareness__infoText S_Regular">
+              Budss is a husle free solution to put your brand on any digital
+              surface including Instagram, Facebook, Twitter and TikTok
+            </div>
           </div>
-        </div>
-        <div class="awareness__socials">
-          <a class="awareness__link" href="#">
-            <img
-              src="src/svg/facebook.svg"
-              alt="Facebook"
-              class="awareness__socialsIcons"
-            />
-          </a>
-          <a class="awareness__link" href="#">
-            <img
-              src="src/svg/twitter.svg"
-              alt="Twitter"
-              class="awareness__socialsIcons"
-            />
-          </a>
-          <a class="awareness__link" href="#">
-            <img
-              src="src//svg/instagram.svg"
-              alt="Instagram"
-              class="awareness__socialsIcons"
-            />
-          </a>
-          <a class="awareness__link" href="#">
-            <img
-              src="src/svg/tiktok.svg"
-              alt="Tik-Tok"
-              class="awareness__socialsIcons"
-            />
-          </a>
+          <div class="awareness__socials">
+            <a class="awareness__link" href="#">
+              <img
+                src="src/svg/facebook.svg"
+                alt="Facebook"
+                class="awareness__socialsIcons"
+              />
+            </a>
+            <a class="awareness__link" href="#">
+              <img
+                src="src/svg/twitter.svg"
+                alt="Twitter"
+                class="awareness__socialsIcons"
+              />
+            </a>
+            <a class="awareness__link" href="#">
+              <img
+                src="src//svg/instagram.svg"
+                alt="Instagram"
+                class="awareness__socialsIcons"
+              />
+            </a>
+            <a class="awareness__link" href="#">
+              <img
+                src="src/svg/tiktok.svg"
+                alt="Tik-Tok"
+                class="awareness__socialsIcons"
+              />
+            </a>
+          </div>
         </div>
       </section>
       <section class="partners">
-        <img src="src/svg/square.svg" alt="Square" class="partners__logo" />
-        <img src="src/svg/shopify.svg" alt="Shopify" class="partners__logo" />
-        <img
-          src="src/svg/woocommerce.svg"
-          alt="Woo Commerce"
-          class="partners__logo"
-        />
-        <img
-          src="src/svg/squarespace.svg"
-          alt="Squarespace"
-          class="partners__logo"
-        />
-        <img src="src/svg/clover.svg" alt="Clover" class="partners__logo" />
+        <div class="partners__wrapper">
+          <img src="src/svg/square.svg" alt="Square" class="partners__logo" />
+          <img src="src/svg/shopify.svg" alt="Shopify" class="partners__logo" />
+          <img
+            src="src/svg/woocommerce.svg"
+            alt="Woo Commerce"
+            class="partners__logo"
+          />
+          <img
+            src="src/svg/squarespace.svg"
+            alt="Squarespace"
+            class="partners__logo"
+          />
+          <img src="src/svg/clover.svg" alt="Clover" class="partners__logo" />
+        </div>
       </section>
     </main>
     <footer class="footer">
-      <div class="footer__upperBlock">
-        <div class="footer__logo">
-          <img src="src/svg/logo.svg" alt="Logo" class="footer__logoImage" />
-          <div class="footer__logoSiteName S_SemiBold">budss</div>
+      <div class="footer__wrapper">
+        <div class="footer__upperBlock">
+          <div class="footer__logo">
+            <img src="src/svg/logo.svg" alt="Logo" class="footer__logoImage" />
+            <div class="footer__logoSiteName S_SemiBold">budss</div>
+          </div>
+          <div class="footer__info S_Medium">
+            <a href="#" class="footer__infoLink">For Business</a>
+            <a href="#" class="footer__infoLink">For Customers</a>
+            <a href="#" class="footer__infoLink footer__desktopInfoLink">
+              Privacy Policy
+            </a>
+            <a href="#" class="footer__infoLink footer__desktopInfoLink">
+              Terms Of Use - Seller
+            </a>
+            <a href="#" class="footer__infoLink footer__desktopInfoLink">
+              Terms of Use - Sellers & Customers
+            </a>
+          </div>
+          <button class="footer__button button S_SemiBold">
+            Contact Sales
+          </button>
+          <div class="footer__stores">
+            <a class="footer__storeLink" href="#">
+              <img
+                src="src/svg/googlePlay.svg"
+                alt="Google Play"
+                class="footer__googlePlay"
+              />
+            </a>
+            <a class="footer__storeLink" href="#">
+              <img
+                src="src/svg/appStore.svg"
+                alt="App Store"
+                class="footer__appStore"
+              />
+            </a>
+          </div>
         </div>
-        <div class="footer__info S_Medium">
-          <a href="#" class="footer__infoLink">For Business</a>
-          <a href="#" class="footer__infoLink">For Customers</a>
-          <a href="#" class="footer__infoLink footer__desktopInfoLink">
-            Privacy Policy
-          </a>
-          <a href="#" class="footer__infoLink footer__desktopInfoLink">
-            Terms Of Use - Seller
-          </a>
-          <a href="#" class="footer__infoLink footer__desktopInfoLink">
-            Terms of Use - Sellers & Customers
-          </a>
-        </div>
-        <button class="footer__button button S_SemiBold">Contact Sales</button>
-        <div class="footer__stores">
-          <a class="footer__storeLink" href="#">
-            <img
-              src="src/svg/googlePlay.svg"
-              alt="Google Play"
-              class="footer__googlePlay"
-            />
-          </a>
-          <a class="footer__storeLink" href="#">
-            <img
-              src="src/svg/appStore.svg"
-              alt="App Store"
-              class="footer__appStore"
-            />
-          </a>
-        </div>
-      </div>
-      <div class="footer__lowerBlock B_Light">
-        <div class="footer__copyright">
-          © Copyright 2023, All Rights Reserved by Budss
-        </div>
-        <div class="footer__lowerInfo B_Light_Underline">
-          <a href="#" class="footer__lowerInfoLink">Privacy Policy</a>
-          <a href="#" class="footer__lowerInfoLink">Terms Of Use - Seller</a>
-          <a href="#" class="footer__lowerInfoLink"
-            >Terms of Use - Sellers & Customers</a
-          >
+        <div class="footer__lowerBlock B_Light">
+          <div class="footer__copyright">
+            © Copyright 2023, All Rights Reserved by Budss
+          </div>
+          <div class="footer__lowerInfo B_Light_Underline">
+            <a href="#" class="footer__lowerInfoLink">Privacy Policy</a>
+            <a href="#" class="footer__lowerInfoLink">Terms Of Use - Seller</a>
+            <a href="#" class="footer__lowerInfoLink"
+              >Terms of Use - Sellers & Customers</a
+            >
+          </div>
         </div>
       </div>
     </footer>
-    <div class="mobileMenu">
+    <div class="mobileMenu" open="false">
       <div class="mobileMenu__box">
         <button class="mobileMenu__closeButton">
           <img
@@ -536,6 +564,30 @@
             id="successModalButton"
           >
             Super!
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="cookiesModal">
+      <div class="cookiesModal__wrapper">
+        <div class="cookiesModal__box">
+          <button class="cookiesModal__closeButton">
+            <img
+              class="modal__closeButtonImage"
+              src="src/svg/modalClose.svg"
+              alt="Close"
+            />
+          </button>
+          <div class="cookiesModal__text S_Light">
+            This website uses cookies to ensure you get the best experience on
+            our website. They also allow us to analyze user behavior in order to
+            constantly improve the website for you.
+          </div>
+          <button class="cookeisModal__acceptButton modalButton S_SemiBold">
+            Accept
+          </button>
+          <button class="cookeisModal__declineButton outlineButton S_SemiBold">
+            Decline
           </button>
         </div>
       </div>

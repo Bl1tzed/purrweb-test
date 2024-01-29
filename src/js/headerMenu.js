@@ -3,11 +3,8 @@ const mobileMenu = document.querySelector(".mobileMenu");
 const mobileMenuCloseButton = document.querySelector(
   ".mobileMenu__closeButton"
 );
-const bodyOverflowY = document.querySelector("body");
-const htmlOverflowY = document.querySelector("html");
 
 headerMenuButton.addEventListener("click", () => {
-  console.log(bodyOverflowY);
   mobileMenu.setAttribute("open", "true");
   bodyOverflowY.setAttribute("hideOverflowY", "true");
   htmlOverflowY.setAttribute("hideOverflowY", "true");

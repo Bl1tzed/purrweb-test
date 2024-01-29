@@ -9,11 +9,12 @@ html {
 
 html,
 body {
-  overflow-x: hidden;
+  overflow-x: clip;
+  scrollbar-gutter: stable;
 }
 html[hideOverflowY="true"],
 body[hideOverflowY="true"] {
-  overflow-y: hidden;
+  overflow-y: clip;
 }
 
 html[hideOverflowY="false"],
@@ -21,7 +22,6 @@ body[hideOverflowY="false"] {
   overflow-y: visible;
 }
 body {
-  position: relative;
   background-color: var(--grayscale-color-01);
 }
 
@@ -34,7 +34,8 @@ h5 {
 }
 
 .button,
-.modalButton {
+.modalButton,
+.outlineButton {
   font-size: 2rem;
   padding: 1.6rem 3rem;
   border-radius: 1.6rem;
@@ -42,17 +43,32 @@ h5 {
   color: var(--grayscale-color-07);
   cursor: pointer;
   border: none;
+  transition: background-color 0.3s ease-out;
+}
+
+.outlineButton {
+  background-color: var(--grayscale-color-07);
+  color: var(--grayscale-color-00);
+  outline: 2px solid var(--primary-color-01);
+}
+
+.outlineButton:hover {
+  background-color: var(--grayscale-color-05);
+}
+
+.outlineButton:active {
+  background-color: var(--grayscale-color-05);
 }
 
 .button:hover,
 .modalButton:hover {
-  transition: background-color 0.3s ease-out;
   background-color: var(--primary-color-00);
 }
 
 .button:focus,
-.modalButton:focus {
-  border: 2px solid var(--primary-color-03);
+.modalButton:focus,
+.outlineButton:focus {
+  outline: 2px solid var(--primary-color-03);
 }
 
 .button:active,
@@ -61,7 +77,8 @@ h5 {
 }
 
 .button:disabled,
-.modalButton:disabled {
+.modalButton:disabled,
+.outlineButton:disabled {
   background-color: var(--grayscale-color-03);
   cursor: default;
 }
@@ -69,11 +86,15 @@ h5 {
 .tabs {
   background-color: var(--secondary-color-02);
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .tabs__wrapper {
   display: flex;
   font-size: 1.6rem;
+  width: 100%;
+  max-width: 144rem;
 }
 
 .tabs__option {
@@ -93,15 +114,23 @@ h5 {
 .header {
   position: sticky;
   top: 0;
-  display: inline-flex;
-  justify-content: space-between;
-  align-items: center;
+  display: flex;
+  justify-content: center;
   height: 7rem;
   width: 100%;
   background-color: var(--grayscale-color-01);
   color: var(--grayscale-color-07);
   padding: 1.6rem;
   z-index: 4;
+}
+
+.header__wrapper {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 144rem;
+  align-items: center;
 }
 
 .header__logo {
@@ -141,10 +170,6 @@ h5 {
   width: 100%;
   padding: 5rem 1.6rem 0;
   color: var(--grayscale-color-07);
-}
-
-.hero {
-  height: 85svh;
 }
 
 .hero__infoWrapper {
@@ -197,23 +222,23 @@ h5 {
   display: flex;
   margin-top: 4rem;
   flex-wrap: nowrap;
-  justify-content: space-between;
   position: relative;
   flex-direction: column;
 }
 
-.about__mainTitle {
+.about__title {
   font-size: 4rem;
+  max-width: 144rem;
+  width: 100%;
 }
 
-.about__mainText {
+.about__subtitle {
   display: inline-block;
-  margin-top: 3rem;
   font-size: 2.4rem;
 }
 
-.about__info {
-  margin-top: 4rem;
+.about__box {
+  margin-top: 8rem;
 }
 
 .about__infoCard:not(:first-child) {
@@ -293,7 +318,7 @@ h5 {
 }
 
 .howWorks__scroller[data-animated="true"] {
-  overflow: hidden;
+  overflow: clip;
 }
 
 .howWorks__scroller[data-direction="right"] {
@@ -307,7 +332,7 @@ h5 {
 .howWorks__scroller[data-animated="true"] .howWorks__scrollerInner {
   width: max-content;
   flex-wrap: nowrap;
-  animation: scroll 60s var(--_animation-direction, forwards) linear infinite;
+  animation: scroll 120s var(--_animation-direction, forwards) linear infinite;
 }
 
 .howWorks__scrollerInner {
@@ -382,7 +407,7 @@ h5 {
   background-color: var(--grayscale-color-06);
   border-radius: 2rem;
   position: relative;
-  overflow: hidden;
+  overflow: clip;
   display: flex;
   flex-direction: column;
 }
@@ -461,6 +486,8 @@ h5 {
   background-color: var(--grayscale-color-06);
   width: 100svw;
   margin-left: -1.6rem;
+  display: flex;
+  justify-content: center;
 }
 
 .cta__box {
@@ -472,6 +499,8 @@ h5 {
   align-content: center;
   align-items: center;
   border: 1px solid var(--grayscale-color-04);
+  width: 100%;
+  max-width: 144rem;
 }
 
 .cta__boxTitle {
@@ -494,6 +523,7 @@ h5 {
   display: flex;
   align-items: center;
   flex-direction: column;
+  justify-content: center;
 }
 
 .awareness__info {
@@ -514,6 +544,7 @@ h5 {
   margin-top: 2rem;
   display: flex;
   gap: 2.8rem;
+  justify-content: center;
 }
 
 .awareness__socialsIcons {
@@ -534,9 +565,14 @@ h5 {
   background-color: var(--grayscale-color-06);
   width: 100svw;
   margin-left: -1.6rem;
+}
+
+.partners__wrapper {
+  width: 100%;
   display: flex;
   gap: 3rem 4rem;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .partners__logo {
@@ -624,14 +660,14 @@ h5 {
 }
 
 .mobileMenu {
-  visibility: hidden;
   position: fixed;
   left: 0;
-  top: 100svh;
+  top: 0;
   width: 100svw;
   height: 100svh;
   z-index: 9;
   background-color: var(--grayscale-color-01);
+  transition: transform 0.45s ease-out;
 }
 
 .mobileMenu__closeButton {
@@ -662,14 +698,8 @@ h5 {
   gap: 1.6rem;
 }
 
-.mobileMenu[open="true"] {
-  visibility: visible;
-  transform: translateY(-100%);
-  transition: transform 1s ease-in-out;
-}
-
 .mobileMenu[open="false"] {
-  transform: translateY(100%);
+  transform: translateY(-100%);
 }
 
 .modal,
@@ -697,7 +727,7 @@ h5 {
   height: fit-content;
   width: fit-content;
   max-width: 45rem;
-  margin: 0 2rem;
+  margin: 2rem;
   position: relative;
 }
 
@@ -732,7 +762,8 @@ h5 {
 }
 
 .modal__closeButton,
-.successModal__closeButton {
+.successModal__closeButton,
+.cookiesModal__closeButton {
   background-color: transparent;
   border: none;
   padding: 0.5rem;
@@ -819,6 +850,44 @@ h5 {
   width: 100%;
 }
 
+.mobileMenu__infoLink {
+  width: fit-content;
+}
+
+.cookiesModal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100svw;
+  height: 100svh;
+  z-index: 9;
+  background-color: var(--modal-background);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.cookiesModal__box {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 2rem;
+  background-color: var(--grayscale-color-07);
+  border-radius: 2rem;
+  height: fit-content;
+  width: fit-content;
+  max-width: 45rem;
+  margin: 2rem;
+  position: relative;
+}
+
+.cookeisModal__acceptButton {
+  margin-top: 4rem;
+}
+
+.cookeisModal__declineButton {
+  margin-top: 2rem;
+}
+
 @keyframes scroll {
   to {
     transform: translate(calc(-50% - 0.5rem));
@@ -871,8 +940,8 @@ h5 {
   .header__button {
     display: block;
   }
-  .tabs__wrapper {
-    margin-left: 6rem;
+  .tabs {
+    padding: 0 6rem;
   }
   .header {
     padding: 0 6rem;
@@ -881,11 +950,13 @@ h5 {
     display: none;
   }
   .main {
-    padding: 10rem 6rem 0;
+    padding: 0 6rem;
   }
   .hero {
+    height: calc(100svh - 10.9rem);
     display: flex;
-    justify-content: start;
+    justify-content: center;
+    align-items: center;
     gap: max(10rem, 10%);
   }
   .hero__infoWrapper {
@@ -920,16 +991,16 @@ h5 {
   }
   .about {
     margin-top: 0;
-    flex-direction: row;
+    flex-direction: column;
   }
   .about__info {
     display: flex;
     flex-wrap: wrap;
   }
-  .about__mainTitle {
+  .about__title {
     font-size: 9.6rem;
   }
-  .about__mainText {
+  .about__subtitle {
     width: 40rem;
     font-size: 3.6rem;
   }
@@ -1202,5 +1273,44 @@ h5 {
   }
   .successModal__text {
     font-size: 2.4rem;
+  }
+  .about__wrapper {
+    display: flex;
+    margin-top: 8rem;
+    flex-direction: column;
+    align-items: center;
+  }
+  .about__box {
+    display: flex;
+    max-width: 144rem;
+  }
+  .hero__wrapper {
+    max-width: 144rem;
+    display: flex;
+  }
+
+  .awareness__wrapper {
+    display: flex;
+  }
+  .footer__wrapper {
+    max-width: 144rem;
+    margin: auto;
+  }
+  .about__box {
+    margin-top: 3rem;
+  }
+  .cookiesModal__text {
+    max-width: 78.3rem;
+  }
+  .cookiesModal__box {
+    flex-direction: row;
+    padding: 3rem;
+    max-width: 144rem;
+  }
+  .cookeisModal__acceptButton {
+    margin: 0 0 0 14rem;
+  }
+  .cookeisModal__declineButton {
+    margin: 0 2rem;
   }
 }

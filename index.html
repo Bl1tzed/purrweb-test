@@ -424,25 +424,27 @@
       </div>
     </footer>
     <div class="mobileMenu" open="false">
-      <div class="mobileMenu__box">
-        <button class="mobileMenu__closeButton">
-          <img
-            class="mobileMenu__closeImage"
-            src="src/svg/close.svg"
-            alt="Close"
-          />
-        </button>
-        <button class="mobileMenu__contactButton button S_SemiBold">
-          Contact Sales
-        </button>
-        <div class="mobileMenu__info S_Medium">
-          <a href="#" class="mobileMenu__infoLink">For Business</a>
-          <a href="#" class="mobileMenu__infoLink">For Customers</a>
-          <a href="#" class="mobileMenu__infoLink"> Privacy Policy </a>
-          <a href="#" class="mobileMenu__infoLink"> Terms Of Use - Seller </a>
-          <a href="#" class="mobileMenu__infoLink">
-            Terms of Use - Sellers & Customers
-          </a>
+      <button class="mobileMenu__closeButton">
+        <img
+          class="mobileMenu__closeImage"
+          src="src/svg/close.svg"
+          alt="Close"
+        />
+      </button>
+      <div class="mobileMenu__wrapper">
+        <div class="mobileMenu__box">
+          <button class="mobileMenu__contactButton button S_SemiBold">
+            Contact Sales
+          </button>
+          <div class="mobileMenu__info S_Medium">
+            <a href="#" class="mobileMenu__infoLink">For Business</a>
+            <a href="#" class="mobileMenu__infoLink">For Customers</a>
+            <a href="#" class="mobileMenu__infoLink"> Privacy Policy </a>
+            <a href="#" class="mobileMenu__infoLink"> Terms Of Use - Seller </a>
+            <a href="#" class="mobileMenu__infoLink">
+              Terms of Use - Sellers & Customers
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -466,7 +468,7 @@
                 name="name"
                 id="name"
                 type="text"
-                autocomplete="name"
+                autocomplete="off"
                 req
               />
               <div class="modal__inputError B_Regular redColor">Error</div>
@@ -480,7 +482,7 @@
                 name="email"
                 id="email"
                 type="email"
-                autocomplete="email"
+                autocomplete="off"
                 req
               />
               <div class="modal__inputError B_Regular redColor">Error</div>
@@ -494,7 +496,7 @@
                 name="phoneNumber"
                 id="phoneNumber"
                 type="tel"
-                autocomplete="tel"
+                autocomplete="off"
                 req
               />
               <div class="modal__inputError B_Regular redColor">Error</div>

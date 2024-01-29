@@ -1,3 +1,5 @@
+import { bodyOverflowY, htmlOverflowY } from "./utilities.js";
+
 const headerMenuButton = document.querySelector(".header__mobileMenu");
 const mobileMenu = document.querySelector(".mobileMenu");
 const mobileMenuCloseButton = document.querySelector(

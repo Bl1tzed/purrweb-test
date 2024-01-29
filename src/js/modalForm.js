@@ -24,6 +24,17 @@ const successModalCloseButton = document.querySelector(
 );
 const successModalButton = document.querySelector("#successModalButton");
 
+function validateEmail(email) {
+  let re =
+    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(email).toLowerCase());
+}
+
+function validatePhone(phone) {
+  let re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+  return re.test(String(phone));
+}
+
 for (let i = 0; i < buttons.length; i++) {
   buttons[i].addEventListener("click", () => {
     modal.style.visibility = "visible";
@@ -38,7 +49,7 @@ successModalCloseButton.addEventListener("click", () =>
 );
 successModalButton.addEventListener("click", () => closeModal(successModal));
 
-document.addEventListener("click", (e) => {
+document.addEventListener("mousedown", (e) => {
   if (
     !modalBox.contains(e.target) &&
     (e.target === modal || e.target === successModal)
@@ -60,18 +71,37 @@ modalForm.addEventListener("change", () => {
 
 modalForm.addEventListener("submit", function (e) {
   e.preventDefault();
-  const emailVal = emailInput.value;
-  const phoneVal = phoneNumberInput.value;
+  const emailValue = emailInput.value;
+  const phoneValue = phoneNumberInput.value;
   const emptyInputs = Array.from(reqInputs).filter(
     (input) => input.value === ""
   );
 
+  let isPhoneValid = false;
+  let isEmailValid = false;
+
+  if (!validateEmail(emailValue)) {
+    emailInput.setAttribute("data-error", "true");
+    emailInput.nextSibling.nextSibling.textContent = "Invalid Email";
+  } else {
+    isEmailValid = true;
+  }
+
+  if (!validatePhone(phoneValue)) {
+    phoneNumberInput.setAttribute("data-error", "true");
+    phoneNumberInput.nextSibling.nextSibling.textContent =
+      "Invalid phone number";
+  } else {
+    globalErrorMessage.removeAttribute("data-error");
+    isPhoneValid = true;
+  }
+
   reqInputs.forEach((input) => {
     if (input.value === "") {
-      input.setAttribute("data-error", "true");
+      input.setAttribute("empty-error", "true");
       input.nextSibling.nextSibling.textContent = "The field is required";
     } else {
-      input.removeAttribute("data-error");
+      input.removeAttribute("empty-error");
     }
   });
 
@@ -79,37 +109,13 @@ modalForm.addEventListener("submit", function (e) {
     globalErrorMessage.setAttribute("data-error", "true");
     globalErrorMessage.textContent = "Please fill in all required fields";
     return false;
-  }
-
-  if (!validateEmail(emailVal)) {
-    emailInput.setAttribute("data-error", "true");
-    emailInput.nextSibling.nextSibling.textContent = "Invalid Email";
-    globalErrorMessage.setAttribute("data-error", "true");
-    globalErrorMessage.textContent = "Invalid data";
-    return false;
-  }
-
-  if (!validatePhone(phoneVal)) {
-    phoneNumberInput.setAttribute("data-error", "true");
-    phoneNumberInput.nextSibling.nextSibling.textContent =
-      "Invalid phone number";
-    globalErrorMessage.setAttribute("data-error", "true");
-    globalErrorMessage.textContent = "Invalid data";
-    return false;
   } else {
     globalErrorMessage.removeAttribute("data-error");
+  }
+
+  if (!isPhoneValid || !isEmailValid) {
+    return false;
   }
   modal.style.visibility = "hidden";
   successModal.style.visibility = "visible";
 });
-
-function validateEmail(email) {
-  let re =
-    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  return re.test(String(email).toLowerCase());
-}
-
-function validatePhone(phone) {
-  let re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
-  return re.test(String(phone));
-}

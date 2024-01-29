@@ -11,12 +11,21 @@ const cookeisModalDeclineButton = document.querySelector(
   ".cookeisModal__declineButton"
 );
 
-cookiesModalCloseButton.addEventListener("click", () =>
-  closeModal(cookiesModal)
-);
-cookeisModalAcceptButton.addEventListener("click", () =>
-  closeModal(cookiesModal)
-);
-cookeisModalDeclineButton.addEventListener("click", () =>
-  closeModal(cookiesModal)
-);
+if (document.cookie == "") {
+  setTimeout(() => {
+    cookiesModal.style.visibility = "visible";
+  }, 1000);
+}
+
+cookiesModalCloseButton.addEventListener("click", () => {
+  document.cookie = "status=declined";
+  closeModal(cookiesModal);
+});
+cookeisModalAcceptButton.addEventListener("click", () => {
+  document.cookie = "status=accept";
+  closeModal(cookiesModal);
+});
+cookeisModalDeclineButton.addEventListener("click", () => {
+  document.cookie = "status=declined";
+  closeModal(cookiesModal);
+});

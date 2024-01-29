@@ -875,6 +875,7 @@ h5 {
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  visibility: hidden;
 }
 
 .cookiesModal__box {

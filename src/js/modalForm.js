@@ -7,15 +7,11 @@ const modalBox = document.querySelector(".modal__box");
 const modalCloseButton = document.querySelector(".modal__closeButton");
 
 const reqInputs = document.querySelectorAll("[req]");
-const errorMessages = document.querySelectorAll(".modal__inputError");
 const globalErrorMessage = document.querySelector("[globalerror]");
 const modalSubmitButton = document.querySelector("#modalSubmitButton");
 
-const nameInput = document.querySelector("[name=name]");
 const emailInput = document.querySelector("[name=email]");
 const phoneNumberInput = document.querySelector("[name=phoneNumber]");
-const companyInput = document.querySelector("[name=company]");
-const urlInput = document.querySelector("[name=url]");
 
 const successModal = document.querySelector(".successModal");
 

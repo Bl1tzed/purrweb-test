@@ -57,13 +57,14 @@
           </div>
           <div class="hero__maskGroup">
             <picture>
-              <!-- <source
+              <source
                 srcset="
                   src/images/heroImage@1x.webp,
                   src/images/heroImage@2x.webp 2x
                 "
                 type="image/webp"
-              /> -->
+                media="max-width: 1440px"
+              />
               <img
                 class="hero__image"
                 src="src/images/heroImage.png"
@@ -88,7 +89,11 @@
             </div>
             <div class="about__info">
               <div class="about__infoCard">
-                <img src="src/svg/contactless.svg" alt="" />
+                <img
+                  class="about__infoCardImage"
+                  src="src/svg/contactless.svg"
+                  alt=""
+                />
                 <div class="about__infoCardTitle T_Bold">Contactless</div>
                 <div class="about__infoCardText B_Regular">
                   Budss uses near field communication (NFC) for making
@@ -96,7 +101,11 @@
                 </div>
               </div>
               <div class="about__infoCard">
-                <img src="src/svg/increasedBuyingPower.svg" alt="" />
+                <img
+                  class="about__infoCardImage"
+                  src="src/svg/increasedBuyingPower.svg"
+                  alt=""
+                />
                 <div class="about__infoCardTitle T_Bold">
                   Increased Buying Power
                 </div>
@@ -105,7 +114,11 @@
                 </div>
               </div>
               <div class="about__infoCard">
-                <img src="src/svg/analyticsInsights.svg" alt="" />
+                <img
+                  class="about__infoCardImage"
+                  src="src/svg/analyticsInsights.svg"
+                  alt=""
+                />
                 <div class="about__infoCardTitle T_Bold">
                   Analytics & Insights
                 </div>
@@ -115,7 +128,11 @@
                 </div>
               </div>
               <div class="about__infoCard">
-                <img src="src/svg/fraudProtection.svg" alt="" />
+                <img
+                  class="about__infoCardImage"
+                  src="src/svg/fraudProtection.svg"
+                  alt=""
+                />
                 <div class="about__infoCardTitle T_Bold">Fraud Protection</div>
                 <div class="about__infoCardText B_Regular">
                   Budss handles all payments with a fraud prevention algorithm
@@ -135,7 +152,13 @@
       <section class="howWorks">
         <div class="howWorks__mockup">
           <picture>
-            <source srcset="src/images/phoneMockup.webp" type="image/webp" />
+            <source
+              srcset="
+                src/images/phoneMockup@1x.webp,
+                src/images/phoneMockup@1x.webp 2x
+              "
+              type="image/webp"
+            />
             <img
               class="howWorks__mockupImage"
               src="src/images/phoneMockup.png"

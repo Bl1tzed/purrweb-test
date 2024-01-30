@@ -154,6 +154,7 @@ h5 {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  user-select: none;
 }
 
 .header__mobileMenuImage {
@@ -208,6 +209,7 @@ h5 {
   position: relative;
   z-index: 1;
   height: 30rem;
+  user-select: none;
 }
 
 .hero__background {
@@ -216,6 +218,7 @@ h5 {
   left: 3rem;
   z-index: 0;
   height: 31.5rem;
+  user-select: none;
 }
 
 .about {
@@ -245,6 +248,10 @@ h5 {
   margin-top: 6rem;
 }
 
+.about__infoCardImage {
+  user-select: none;
+}
+
 .about__infoCardTitle {
   margin-top: 1rem;
   font-size: 3.2rem;
@@ -260,6 +267,7 @@ h5 {
   top: 50rem;
   left: -6rem;
   display: none;
+  user-select: none;
 }
 
 .howWorks {
@@ -283,6 +291,7 @@ h5 {
   position: relative;
   height: 100%;
   z-index: 2;
+  user-select: none;
 }
 
 .howWorks__video {
@@ -427,8 +436,9 @@ h5 {
 
 .whyBudds__cardImage {
   position: relative;
-  bottom: -0.3rem;
+  bottom: -0.4rem;
   z-index: 0;
+  user-select: none;
 }
 
 .whyBudds__imageFirstMobile {
@@ -550,6 +560,7 @@ h5 {
 .awareness__socialsIcons {
   height: 6.4rem;
   width: 6.4rem;
+  user-select: none;
 }
 
 .awareness__link {
@@ -577,6 +588,7 @@ h5 {
 
 .partners__logo {
   height: 3.5rem;
+  user-select: none;
 }
 
 .footer {
@@ -596,6 +608,15 @@ h5 {
 .footer__logoImage {
   height: 3rem;
   width: 2.7rem;
+  user-select: none;
+}
+
+.footer__googlePlay {
+  user-select: none;
+}
+
+.footer__appStore {
+  user-select: none;
 }
 
 .footer__logoSiteName {

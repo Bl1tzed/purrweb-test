@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/styles/index.css" />
+    <link rel="icon" type="image/svg+xml" href="src/svg/logo.svg" />
     <script type="module" src="src/js/utilities.js" defer></script>
     <script type="module" src="src/js/scroller.js" defer></script>
     <script type="module" src="src/js/headerMenu.js" defer></script>
@@ -55,11 +56,20 @@
             </button>
           </div>
           <div class="hero__maskGroup">
-            <img
-              class="hero__image"
-              src="src/images/heroImage.png"
-              alt="Hero Image"
-            />
+            <picture>
+              <!-- <source
+                srcset="
+                  src/images/heroImage@1x.webp,
+                  src/images/heroImage@2x.webp 2x
+                "
+                type="image/webp"
+              /> -->
+              <img
+                class="hero__image"
+                src="src/images/heroImage.png"
+                alt="Hero Image"
+              />
+            </picture>
             <img
               class="hero__background"
               src="src/svg/hero_background.svg"
@@ -115,7 +125,6 @@
               </div>
             </div>
           </div>
-
           <img
             class="about__lines"
             src="src/svg/aboutSectionLines.svg"
@@ -125,11 +134,14 @@
       </section>
       <section class="howWorks">
         <div class="howWorks__mockup">
-          <img
-            class="howWorks__mockupImage"
-            src="src/images/phoneMockup.png"
-            alt="Mockup"
-          />
+          <picture>
+            <source srcset="src/images/phoneMockup.webp" type="image/webp" />
+            <img
+              class="howWorks__mockupImage"
+              src="src/images/phoneMockup.png"
+              alt="Mockup"
+            />
+          </picture>
           <video
             class="howWorks__video"
             autoplay
@@ -469,6 +481,7 @@
                 id="name"
                 type="text"
                 autocomplete="off"
+                placeholder="Enter name"
                 req
               />
               <div class="modal__inputError B_Regular redColor">Error</div>
@@ -483,6 +496,7 @@
                 id="email"
                 type="email"
                 autocomplete="off"
+                placeholder="Enter email"
                 req
               />
               <div class="modal__inputError B_Regular redColor">Error</div>
@@ -497,6 +511,7 @@
                 id="phoneNumber"
                 type="tel"
                 autocomplete="off"
+                placeholder="+7 900 000 00 00"
                 req
               />
               <div class="modal__inputError B_Regular redColor">Error</div>
@@ -508,6 +523,7 @@
                 name="company"
                 id="company"
                 type="text"
+                placeholder="Enter company"
               />
               <div class="modal__inputError B_Regular redColor">Error</div>
             </div>
@@ -520,6 +536,7 @@
                 name="url"
                 id="url"
                 type="text"
+                placeholder="Enter Website/Store URL"
               />
               <div class="modal__inputError B_Regular redColor">Error</div>
             </div>

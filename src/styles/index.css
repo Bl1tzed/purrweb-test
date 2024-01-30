@@ -796,7 +796,7 @@ h5 {
 
 .modal__label {
   font: 1.4rem;
-  margin: 0;
+  margin-bottom: 0.4rem;
 }
 
 .modal__button {
@@ -959,6 +959,12 @@ h5 {
 }
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--scrollbar-thumb-background-hover);
+}
+
+#phoneNumber {
+  padding-left: 4rem;
+  background: url("/src/svg/russianFederation.svg") no-repeat;
+  background-position: 1.6rem center;
 }
 
 @media (min-width: 1440px) {

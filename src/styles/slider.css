@@ -1,0 +1,124 @@
+@import "normalize.css";
+
+html {
+  font-size: 10px;
+}
+
+body {
+  width: 100%;
+  min-height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aqua;
+}
+
+.container {
+  position: relative;
+  width: 80rem;
+  height: 44rem;
+  box-sizing: initial;
+}
+
+.container__slides {
+  width: 70rem;
+  height: calc(100% - 4rem);
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.container__slides img {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.container__slides img:not([active]) {
+  top: 0;
+  left: -100%;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 1.4rem;
+  font-size: 2.4rem;
+  transition: background-color 0.5s;
+  border-radius: 5rem;
+  user-select: none;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.arrow:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.arrow[next] {
+  right: 0.5rem;
+}
+
+.arrow[prev] {
+  left: 0.5rem;
+}
+
+.container__dots {
+  position: absolute;
+  bottom: 1rem;
+  z-index: 2;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1rem;
+}
+
+.dot {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  transition: background-color 0.6s ease;
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.dot[active] {
+  background-color: rgb(128, 128, 128);
+}
+
+@keyframes slideNextCurrentImage {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0%;
+  }
+}
+
+@keyframes slideNextImage {
+  from {
+    left: 0%;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+@keyframes slidePrevImage {
+  from {
+    left: 0%;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes slidePrevCurrentImage {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0%;
+  }
+}

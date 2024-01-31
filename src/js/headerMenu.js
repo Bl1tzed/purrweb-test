@@ -7,13 +7,13 @@ const mobileMenuCloseButton = document.querySelector(
 );
 
 headerMenuButton.addEventListener("click", () => {
-  mobileMenu.setAttribute("open", "true");
+  mobileMenu.setAttribute("data-open", "true");
   bodyOverflowY.setAttribute("hideOverflowY", "true");
   htmlOverflowY.setAttribute("hideOverflowY", "true");
 });
 
 mobileMenuCloseButton.addEventListener("click", () => {
-  mobileMenu.setAttribute("open", "false");
+  mobileMenu.setAttribute("data-open", "false");
   bodyOverflowY.setAttribute("hideOverflowY", "false");
   htmlOverflowY.setAttribute("hideOverflowY", "false");
 });

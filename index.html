@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/styles/index.css" />
     <link rel="icon" type="image/svg+xml" href="src/svg/logo.svg" />
-    <script type="module" src="src/js/utilities.js" defer></script>
-    <script type="module" src="src/js/scroller.js" defer></script>
-    <script type="module" src="src/js/headerMenu.js" defer></script>
-    <script type="module" src="src/js/modalForm.js" defer></script>
-    <script type="module" src="src/js/cookieModal.js" defer></script>
+    <script type="module" src="src/js/utilities.js"></script>
+    <script type="module" src="src/js/scroller.js"></script>
+    <script type="module" src="src/js/headerMenu.js"></script>
+    <script type="module" src="src/js/modalForm.js"></script>
+    <script type="module" src="src/js/cookieModal.js"></script>
     <title>BUDSS</title>
   </head>
   <body>
@@ -63,7 +63,7 @@
                   src/images/heroImage@2x.webp 2x
                 "
                 type="image/webp"
-                media="max-width: 1440px"
+                media="(max-width: 1440px)"
               />
               <img
                 class="hero__image"
@@ -149,7 +149,7 @@
           />
         </div>
       </section>
-      <section class="howWorks">
+      <div class="howWorks">
         <div class="howWorks__mockup">
           <picture>
             <source
@@ -165,14 +165,7 @@
               alt="Mockup"
             />
           </picture>
-          <video
-            class="howWorks__video"
-            autoplay
-            muted
-            loop
-            playsinline
-            defaultMuted
-          >
+          <video class="howWorks__video" autoplay muted loop playsinline>
             <source src="src/videos/howWorksVideo.webm" type="video/webm" />
             <source src="src/videos/howWorksVideo.mp4" type="video/mp4" />
             Your browser does not support the video tag.
@@ -215,7 +208,7 @@
             </ul>
           </div>
         </div>
-      </section>
+      </div>
       <section class="statPanel">
         <div class="statPanel__improvements">
           <div class="statPanel__improvement">
@@ -386,7 +379,7 @@
           </div>
         </div>
       </section>
-      <section class="partners">
+      <div class="partners">
         <div class="partners__wrapper">
           <img src="src/svg/square.svg" alt="Square" class="partners__logo" />
           <img src="src/svg/shopify.svg" alt="Shopify" class="partners__logo" />
@@ -402,7 +395,7 @@
           />
           <img src="src/svg/clover.svg" alt="Clover" class="partners__logo" />
         </div>
-      </section>
+      </div>
     </main>
     <footer class="footer">
       <div class="footer__wrapper">
@@ -458,7 +451,7 @@
         </div>
       </div>
     </footer>
-    <div class="mobileMenu" open="false">
+    <div class="mobileMenu" data-open="false">
       <button class="mobileMenu__closeButton">
         <img
           class="mobileMenu__closeImage"
@@ -492,7 +485,7 @@
             alt="Close"
           />
         </button>
-        <form class="modal__form" action="" novalidate>
+        <form class="modal__form" novalidate autocomplete="off">
           <div class="modal__inputs">
             <div class="modal__input">
               <label for="name" class="modal__label B_Medium"
@@ -505,7 +498,7 @@
                 type="text"
                 autocomplete="off"
                 placeholder="Enter name"
-                req
+                data-req
               />
               <div class="modal__inputError B_Regular redColor">Error</div>
             </div>
@@ -520,7 +513,7 @@
                 type="email"
                 autocomplete="off"
                 placeholder="Enter email"
-                req
+                data-req
               />
               <div class="modal__inputError B_Regular redColor">Error</div>
             </div>
@@ -535,7 +528,7 @@
                 type="tel"
                 autocomplete="off"
                 placeholder="+7 900 000 00 00"
-                req
+                data-req
               />
               <div class="modal__inputError B_Regular redColor">Error</div>
             </div>
@@ -564,7 +557,10 @@
               <div class="modal__inputError B_Regular redColor">Error</div>
             </div>
           </div>
-          <div class="modal__globalError B_Regular redColor" globalError></div>
+          <div
+            class="modal__data-overallError B_Regular redColor"
+            data-overallError
+          ></div>
           <div class="modal__text B_Light">
             By submitting this form you are agreeing to Budss's
             <a href="#" class="modal__link">Privacy Policy</a> and

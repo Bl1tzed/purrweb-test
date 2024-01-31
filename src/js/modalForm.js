@@ -6,8 +6,8 @@ const modalForm = document.querySelector(".modal__form");
 const modalBox = document.querySelector(".modal__box");
 const modalCloseButton = document.querySelector(".modal__closeButton");
 
-const reqInputs = document.querySelectorAll("[req]");
-const globalErrorMessage = document.querySelector("[globalerror]");
+const reqInputs = document.querySelectorAll("[data-req]");
+const overallErrorMessage = document.querySelector("[data-overallError]");
 const modalSubmitButton = document.querySelector("#modalSubmitButton");
 
 const emailInput = document.querySelector("[name=email]");
@@ -80,6 +80,7 @@ modalForm.addEventListener("submit", function (e) {
     emailInput.setAttribute("data-error", "true");
     emailInput.nextSibling.nextSibling.textContent = "Invalid Email";
   } else {
+    emailInput.removeAttribute("data-error");
     isEmailValid = true;
   }
 
@@ -88,7 +89,7 @@ modalForm.addEventListener("submit", function (e) {
     phoneNumberInput.nextSibling.nextSibling.textContent =
       "Invalid phone number";
   } else {
-    globalErrorMessage.removeAttribute("data-error");
+    phoneNumberInput.removeAttribute("data-error");
     isPhoneValid = true;
   }
 
@@ -102,11 +103,11 @@ modalForm.addEventListener("submit", function (e) {
   });
 
   if (emptyInputs.length !== 0) {
-    globalErrorMessage.setAttribute("data-error", "true");
-    globalErrorMessage.textContent = "Please fill in all required fields";
+    overallErrorMessage.setAttribute("data-error", "true");
+    overallErrorMessage.textContent = "Please fill in all required fields";
     return false;
   } else {
-    globalErrorMessage.removeAttribute("data-error");
+    overallErrorMessage.removeAttribute("data-error");
   }
 
   if (!isPhoneValid || !isEmailValid) {

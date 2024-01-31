@@ -1,17 +1,18 @@
-const slides = document.querySelectorAll("[slide]");
-const next = document.querySelector("[next]");
-const prev = document.querySelector("[prev]");
+const slides = document.querySelectorAll(".slide");
+const next = document.querySelector(".next");
+const prev = document.querySelector(".prev");
 const container = document.querySelector(".container");
 const dotsContainer = document.querySelector(".container__dots");
 
 let counter = 0;
 let autoSlideInterval = null;
 
+slides[0].setAttribute("active", "");
+
 function initIndicators() {
   for (let i = 0; i < slides.length; i++) {
     let element = document.createElement("div");
     element.classList.add("dot");
-    element.setAttribute("attr", `${i}`);
 
     i === 0 && element.setAttribute("active", null);
 

@@ -26,10 +26,10 @@ function initIndicators() {
           "slideNextCurrentImage 0.45s ease-in-out forwards";
       } else if (imageId < counter) {
         slides[counter].style.animation =
-          "slideNextImage 0.45s ease-in-out forwards";
+          "slidePrevImage 0.45s ease-in-out forwards";
         counter = imageId;
         slides[counter].style.animation =
-          "slideNextCurrentImage 0.45s ease-in-out forwards";
+          "slidePrevCurrentImage 0.45s ease-in-out forwards";
       } else {
         return;
       }

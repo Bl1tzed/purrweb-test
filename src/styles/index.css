@@ -288,11 +288,16 @@ h5 {
   margin: auto;
 }
 
+.howWorks__mockupPicture {
+  width: 100%;
+}
+
 .howWorks__mockupImage {
   position: relative;
   height: 100%;
   z-index: 2;
   user-select: none;
+  margin: 0 auto;
 }
 
 .howWorks__video {
@@ -713,16 +718,17 @@ h5 {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  height: calc(100svh - 75px);
 }
 
 .mobileMenu__contactButton {
   max-width: 35rem;
   width: 100%;
-  margin: 12.5rem auto 0;
+  margin: 10svh auto 0;
 }
 
 .mobileMenu__info {
-  margin-top: 17.7rem;
+  margin-top: max(2rem, 15svh);
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
